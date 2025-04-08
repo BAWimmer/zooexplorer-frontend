@@ -45,20 +45,7 @@ export default function Profile() {
   };
 
   return (
-    <div>
-      {/* Header */}
-      <header className="bg-white shadow">
-        <nav className="container mx-auto px-4 flex justify-between items-center h-16">
-          <div className="text-2xl font-bold text-gray-700">ZooExplorer</div>
-          <ul className="flex space-x-6 text-gray-700">
-            <li><a href="/home" className="hover:text-blue-700">Home</a></li>
-            <li><a href="#zoo-details" className="hover:text-blue-700">Zoo Details</a></li>
-            <li><a href="#contact" className="hover:text-blue-700">Contact</a></li>
-            <li><a href="/profile" className="hover:text-blue-700">Profile</a></li>
-          </ul>
-        </nav>
-      </header>
-
+    <>
       {/* Hero Section (Smaller with formal styling) */}
       <section
         id="home"
@@ -230,22 +217,6 @@ export default function Profile() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer id="contact" className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-          <p>
-            For inquiries, please email us at{" "}
-            <a href="mailto:info@zooexplorer.com" className="underline hover:text-blue-400">
-              info@zooexplorer.com
-            </a>
-          </p>
-          <p className="mt-4">
-            &copy; {new Date().getFullYear()} ZooExplorer. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    </div>
+    </>
   );
 }

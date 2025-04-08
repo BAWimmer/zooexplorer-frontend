@@ -1,5 +1,3 @@
-import { image } from "framer-motion/client";
-
 // data/animals.js
 export const animals = [
   {

@@ -48,36 +48,7 @@ export default function BlogPage() {
   const [posts] = useState(dummyPosts);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="bg-white shadow">
-        <nav className="container mx-auto px-4 flex justify-between items-center h-16">
-          <div className="text-2xl font-bold text-gray-700">ZooExplorer</div>
-          <ul className="flex space-x-6 text-gray-700">
-            <li>
-              <Link href="/home" className="hover:text-blue-700">
-                Home
-              </Link>
-            </li>
-            <li>
-              <a href="#zoo-details" className="hover:text-blue-700">
-                Zoo Details
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:text-blue-700">
-                Contact
-              </a>
-            </li>
-            <li>
-              <Link href="/profile" className="hover:text-blue-700">
-                Profile
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+    <>
       {/* Hero Section */}
       <section
         id="home"
@@ -90,16 +61,15 @@ export default function BlogPage() {
             Wildlife & Zoo News
           </h1>
           <p className="mt-4 text-xl text-gray-200">
-          Stay updated with the latest news, multimedia insights, and in‑depth
-          analyses on wildlife conservation and zoo updates.
+            Stay updated with the latest news, multimedia insights, and in‑depth
+            analyses on wildlife conservation and zoo updates.
           </p>
         </div>
       </section>
 
       {/* Blog Content */}
-      <main className="bg-gray-50 py-12 px-4 flex-grow">
+      <main className="bg-gray-50 py-12 px-4">
         <div className="container mx-auto max-w-5xl">
-        
           <div className="grid gap-12 md:grid-cols-2">
             {posts.map((post) => (
               <article
@@ -196,25 +166,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer id="contact" className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-          <p>
-            For inquiries, please email us at{" "}
-            <a
-              href="mailto:info@zooexplorer.com"
-              className="underline hover:text-blue-400"
-            >
-              info@zooexplorer.com
-            </a>
-          </p>
-          <p className="mt-4">
-            &copy; {new Date().getFullYear()} ZooExplorer. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    </div>
+    </>
   );
 }
