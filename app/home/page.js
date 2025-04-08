@@ -15,13 +15,13 @@ export default function Home() {
   const uniqueHabitatTypes = ['All', ...new Set(allHabitatTypes)].sort();
 
   const filteredAnimals = animals
-  .filter((animal) => filterHabitat === 'All' || animal.habitatTypes.includes(filterHabitat))
-  .filter((animal) => filterConservation === 'All' || animal.conservationStatus === filterConservation)
-  .sort((a, b) => 
-    sortOrder === 'asc' 
-      ? a.name.localeCompare(b.name) 
-      : b.name.localeCompare(a.name)
-  );
+    .filter((animal) => filterHabitat === 'All' || animal.habitatTypes.includes(filterHabitat))
+    .filter((animal) => filterConservation === 'All' || animal.conservationStatus === filterConservation)
+    .sort((a, b) =>
+      sortOrder === 'asc'
+        ? a.name.localeCompare(b.name)
+        : b.name.localeCompare(a.name)
+    );
 
   // Function to scroll to the interactive map section smoothly
   const scrollToMap = () => {
@@ -32,7 +32,8 @@ export default function Home() {
   };
 
   return (
-    <>
+      <>
+
       {/* Hero Section */}
       <section
         id="home"
@@ -159,8 +160,8 @@ export default function Home() {
         </div>
       </section>
 
-           {/* Zoo Details */}
-           <section id="zoo-details" className="py-12">
+      {/* Zoo Details */}
+      <section id="zoo-details" className="py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-6 text-white">
             Zoo Details

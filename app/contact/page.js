@@ -23,7 +23,6 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Simple validation
     if (!formData.name || !formData.email || !formData.message) {
       setFormStatus({
         submitted: false,
@@ -32,16 +31,13 @@ export default function Contact() {
       });
       return;
     }
-    
-    // Here you would normally send the data to your backend
-    // For now, we'll just simulate a successful submission
+
     setFormStatus({
       submitted: true,
       error: false,
       message: "Thank you for your message! We'll get back to you soon.",
     });
     
-    // Reset form after successful submission
     setFormData({
       name: "",
       email: "",

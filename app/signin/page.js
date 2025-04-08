@@ -11,18 +11,34 @@ export default function SignIn() {
   } = useForm();
 
   const onSubmit = (data) => {
-    // In a real app, you would validate credentials against an API
+    // In a real app, validate credentials against an API
     if (data.email && data.password) {
       router.push("/home");
     }
   };
 
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
+  return (  
+    <div
+      className="min-h-screen flex items-center justify-center"
+      style={{
+        backgroundImage: "url('/images/background.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md transform hover:scale-105 transition-transform duration-300"
       >
+        {/* Logo and Application Name */}
+        <div className="flex flex-col items-center mb-4">
+          <img src="/images/logo.jpg" alt="App Logo" className="h-16 w-auto" />
+          <h1 className="text-black text-5xl font-bold mt-2 fadeInUp">
+            Zoo ExplorerApp
+          </h1>
+        </div>
+
         <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Sign In</h2>
         <div className="mb-4">
           <label className="block text-gray-700 font-semibold mb-2">Email</label>
@@ -73,6 +89,22 @@ export default function SignIn() {
           </a>
         </p>
       </form>
+      {/* Add the fadeInUp animation style */}
+      <style jsx>{`
+        .fadeInUp {
+          animation: fadeInUp 1.5s ease-in-out;
+        }
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </div>
   );
 }

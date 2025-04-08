@@ -45,7 +45,8 @@ export default function Profile() {
   };
 
   return (
-    <>
+
+      <>
       {/* Hero Section (Smaller with formal styling) */}
       <section
         id="home"
