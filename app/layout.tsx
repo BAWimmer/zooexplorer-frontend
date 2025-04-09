@@ -33,9 +33,8 @@ export default function RootLayout({
             <div className="text-2xl font-bold text-gray-700">ZooExplorer</div>
             <ul className="flex space-x-6 text-gray-700">
               <li><a href="/home" className="hover:text-blue-700">Home</a></li>
-              <li><a href="#about" className="hover:text-blue-700">About</a></li>
-              <li><a href="#animals" className="hover:text-blue-700">Animals</a></li>
-              <li><a href="#zoo-details" className="hover:text-blue-700">Zoo Details</a></li>
+              <li><a href="/about" className="hover:text-blue-700">About</a></li>
+              <li><a href="/zoodetails" className="hover:text-blue-700">Zoo Details</a></li>
               <li><a href="/contact" className="hover:text-blue-700">Contact</a></li>
               <li><a href="/profile" className="hover:text-blue-700">Profile</a></li>
             </ul>
