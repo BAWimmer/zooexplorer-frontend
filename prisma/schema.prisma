@@ -1,4 +1,4 @@
-// filepath: prisma/schema.prisma
+// This file contains the Prisma schema definition for the MongoDB database.
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,6 +14,9 @@ model User {
   email           String   @unique
   password        String
   role            String   @default("User")
+  location        String?
+  bio             String?
+  profilePic      String?  @default("/images/profile-placeholder.jpg")
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 }

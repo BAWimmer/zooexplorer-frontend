@@ -27,3 +27,54 @@ export async function GET(request, context) {
     );
   }
 }
+
+// Update animal (Admin only - protected by middleware)
+export async function PUT(request, context) {
+  const { id } = await context.params;
+  
+  try {
+    const data = await request.json();
+    
+    const updatedAnimal = await prisma.animal.update({
+      where: { id },
+      data: {
+        name: data.name,
+        description: data.description,
+        habitat: data.habitat,
+        habitatTypes: data.habitatTypes,
+        diet: data.diet,
+        conservationStatus: data.conservationStatus,
+        lifespan: data.lifespan,
+        interestingFact: data.interestingFact,
+        imageUrl: data.imageUrl,
+      },
+    });
+    
+    return NextResponse.json(updatedAnimal);
+  } catch (error) {
+    console.error('Error updating animal:', error);
+    return NextResponse.json(
+      { error: error.message || 'Failed to update animal' },
+      { status: 500 }
+    );
+  }
+}
+
+// Delete animal (Admin only - protected by middleware)
+export async function DELETE(request, context) {
+  const { id } = await context.params;
+  
+  try {
+    await prisma.animal.delete({
+      where: { id },
+    });
+    
+    return NextResponse.json({ message: 'Animal deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting animal:', error);
+    return NextResponse.json(
+      { error: error.message || 'Failed to delete animal' },
+      { status: 500 }
+    );
+  }
+}

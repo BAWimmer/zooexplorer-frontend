@@ -39,22 +39,22 @@ export const authOptions = {
       }
     })
   ],
-  callbacks: {
-    async jwt({ token, user }) {
-      // Add role to token after sign in
-      if (user) {
-        token.role = user.role;
-      }
-      return token;
-    },
-    async session({ session, token }) {
-      // Add user role to client-side session
-      if (session?.user) {
-        session.user.role = token.role;
-      }
-      return session;
+callbacks: {
+  async jwt({ token, user }) {
+    if (user) {
+      token.id = user.id;
+      token.role = user.role;
     }
+    return token;
   },
+  async session({ session, token }) {
+    if (session?.user) {
+      session.user.id = token.id;
+      session.user.role = token.role;
+    }
+    return session;
+  }
+},
   pages: {
     signIn: '/signin',
   },

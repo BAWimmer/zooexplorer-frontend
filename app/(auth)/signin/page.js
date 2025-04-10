@@ -32,7 +32,7 @@ export default function SignIn() {
 
   return (  
     <div
-      className="min-h-screen flex items-center justify-center"
+      className="fixed inset-0 w-full h-full flex items-center justify-center"
       style={{
         backgroundImage: "url('/images/background.jpg')",
         backgroundSize: "cover",
@@ -91,7 +91,7 @@ export default function SignIn() {
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded font-semibold transition-colors duration-300"
+          className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded font-semibold transition-colors duration-300"
         >
           Sign In
         </button>

@@ -54,7 +54,7 @@ const onSubmit = async (data) => {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center"
+      className="fixed inset-0 w-full h-full flex items-center justify-center"
       style={{
         backgroundImage: "url('/images/background.jpg')",
         backgroundSize: "cover",
