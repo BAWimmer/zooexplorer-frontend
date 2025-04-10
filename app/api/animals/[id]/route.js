@@ -3,8 +3,8 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export async function GET(request, { params }) {
-  const { id } = params;
+export async function GET(request, context) {
+  const { id } = await context.params;
   
   try {
     const animal = await prisma.animal.findUnique({
