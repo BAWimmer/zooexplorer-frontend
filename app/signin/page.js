@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import { signIn } from "next-auth/react";
 
 export default function SignIn() {
   const router = useRouter();
@@ -10,10 +11,22 @@ export default function SignIn() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    // In a real app, validate credentials against an API
-    if (data.email && data.password) {
-      router.push("/home");
+  const onSubmit = async (data) => {
+    try {
+      const result = await signIn('credentials', {
+        redirect: false,
+        email: data.email,
+        password: data.password,
+      });
+  
+      if (result.error) {
+        alert(result.error);
+      } else {
+        router.push('/home');
+      }
+    } catch (error) {
+      console.error('Sign in error:', error);
+      alert('An error occurred during sign in');
     }
   };
 

@@ -6,7 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed:animals": "node prisma/animalseed.js",
+    "seed:blogs": "node prisma/blogseed.js",
+    "seed:all": "npm run seed:animals && npm run seed:blogs"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   },
   "dependencies": {
     "@prisma/client": "^6.6.0",

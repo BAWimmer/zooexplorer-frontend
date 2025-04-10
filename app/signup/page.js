@@ -25,10 +25,32 @@ export default function SignUp() {
     if (strength === 4) return "Very Strong";
   };
 
-  const onSubmit = (data) => {
-    // In a real app, send data to your API for sign up
-    router.push("/home");
-  };
+// In your SignUp component's onSubmit function:
+const onSubmit = async (data) => {
+  try {
+    const response = await fetch('/api/auth/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: data.email,
+        password: data.password
+      }),
+    });
+    
+    const result = await response.json();
+    
+    if (response.ok) {
+      router.push("/signin");
+    } else {
+      alert(result.error || "Signup failed");
+    }
+  } catch (error) {
+    console.error("Error during signup:", error);
+    alert("An error occurred during signup");
+  }
+};
 
   return (
     <div

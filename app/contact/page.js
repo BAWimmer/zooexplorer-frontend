@@ -20,7 +20,7 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.message) {
@@ -31,19 +31,41 @@ export default function Contact() {
       });
       return;
     }
-
-    setFormStatus({
-      submitted: true,
-      error: false,
-      message: "Thank you for your message! We'll get back to you soon.",
-    });
-    
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+  
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to send message');
+      }
+  
+      setFormStatus({
+        submitted: true,
+        error: false,
+        message: "Thank you for your message! We'll get back to you soon.",
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setFormStatus({
+        submitted: false,
+        error: true,
+        message: error.message || "There was a problem sending your message. Please try again.",
+      });
+    }
   };
 
   return (
@@ -52,7 +74,7 @@ export default function Contact() {
       <section
         id="contact-hero"
         className="relative h-64 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/professional-bg.jpg')" }}
+        style={{ backgroundImage: "url('/images/background.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">

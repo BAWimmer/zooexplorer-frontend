@@ -51,7 +51,7 @@ export default function Profile() {
       <section
         id="home"
         className="relative h-40 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/professional-bg.jpg')" }}
+        style={{ backgroundImage: "url('/images/background.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
