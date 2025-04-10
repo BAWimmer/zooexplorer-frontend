@@ -8,7 +8,6 @@ import AnimalNavigation from '../../../components/AnimalNavigation';
 
 export default function AnimalDetails({ params }) {
   const router = useRouter();
-  // Properly unwrap params with React.use()
   const unwrappedParams = use(params);
   const { id } = unwrappedParams;
   
