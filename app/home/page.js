@@ -1,3 +1,5 @@
+// Home page layout. This layout is used for the  animal gallery, data visualizations, interactive map, and zoo details. It also handles loading and error states when fetching animal data from MongoDB via an API.
+
 "use client";
 import AnimalCard from '../../components/AnimalCard';
 import { useState, useEffect } from 'react';
@@ -224,12 +226,12 @@ export default function Home() {
       </section>
 
       {/* Zoo Details */}
-      <section id="zoo-details" className="py-12 bg-gray-800">
+      <section id="zoo-details" className="py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-6 text-white">
+          <h2 className="text-3xl font-bold text-center mb-6 text-black">
             Zoo Details
           </h2>
-          <div className="max-w-3xl mx-auto text-center text-gray-200 space-y-4">
+          <div className="max-w-3xl mx-auto text-center text-black space-y-4">
             <p>
               Our zoo is located in the heart of the city, offering visitors an immersive wildlife experience with over 200 species from around the world. Established in 1965, the zoo is dedicated to animal conservation, education, and research.
             </p>

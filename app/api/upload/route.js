@@ -1,3 +1,5 @@
+// This is a Next.js API route for handling image uploads for animals.  It saves the uploaded image to the public/images directory and returns the path for use in <img> tags.
+
 import { NextResponse } from 'next/server';
 import { writeFile } from 'fs/promises';
 import path from 'path';

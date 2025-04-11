@@ -1,3 +1,5 @@
+// This script seeds the database with initial blog post data for a zoo website.  Can be edited manually if desired.
+
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 

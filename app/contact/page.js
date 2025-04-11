@@ -1,3 +1,5 @@
+// Content page component.  This component includes a contact form, a section for frequently asked questions, and additional contact information. The form uses React hooks for state management and handles form submission with error handling and success messages. The FAQ section provides answers to common questions about the zoo's operations and policies.
+
 "use client";
 import { useState } from "react";
 

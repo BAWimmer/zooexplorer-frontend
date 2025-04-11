@@ -1,3 +1,6 @@
+// This file is used to fetch all blogs from the database
+// and return them in JSON format.
+
 import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 

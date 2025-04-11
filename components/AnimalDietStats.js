@@ -1,3 +1,6 @@
+// Animal Diet Statistics Component
+// This component fetches animal data from the MongoDB API and displays a bar chart of their diet distribution.
+
 "use client";
 
 import React, { useState, useEffect } from 'react';

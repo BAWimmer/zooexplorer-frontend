@@ -1,3 +1,5 @@
+// Sign up page. The page includes a form for users to enter their email, password, and confirm password, with validation and error handling. Upon successful sign-up, the user is redirected to the sign-in page.
+
 "use client";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";

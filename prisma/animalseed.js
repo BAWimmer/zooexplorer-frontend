@@ -1,3 +1,5 @@
+// Seed File for initial Animal Database.  Can be edited manually if desired.
+
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 

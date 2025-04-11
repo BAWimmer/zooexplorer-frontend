@@ -1,3 +1,6 @@
+// This file handles user signup in a Next.js application using Prisma and bcrypt for password hashing.
+// It checks if a user with the provided email already exists, hashes the password, and creates a new user in the database. If successful, it returns a success message and the user data without the password.
+
 import { PrismaClient } from '@prisma/client';
 import { NextResponse } from 'next/server';
 import bcrypt from 'bcrypt';

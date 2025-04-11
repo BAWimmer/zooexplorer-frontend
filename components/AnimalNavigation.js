@@ -1,3 +1,5 @@
+// Navigation component for animal pages.  This component fetches a list of animals from the MongoDB API and displays them as navigation links.
+
 "use client";
 
 import Link from 'next/link';

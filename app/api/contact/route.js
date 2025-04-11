@@ -1,3 +1,5 @@
+// This file handles the API route for saving contact messages to the mongodb database.
+
 import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 

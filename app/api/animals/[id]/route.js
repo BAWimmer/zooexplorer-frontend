@@ -1,3 +1,6 @@
+// This file is responsible for handling the API routes related to a specific animal.
+// It includes GET, PUT, and DELETE methods to fetch, update, and delete an animal respectively.
+
 import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 

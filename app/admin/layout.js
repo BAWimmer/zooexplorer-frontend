@@ -1,3 +1,5 @@
+// Admin page layout.  This layout is used for all admin pages and includes a sidebar for navigation, a header, and a main content area. It also checks if the user is authenticated and has the Admin role before rendering the page content. If not, it redirects them to the sign-in page or the home page.
+
 "use client";
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';

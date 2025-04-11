@@ -1,3 +1,5 @@
+// Animal management page for admin use. This page allows admins to view, add, edit, and delete animals in the database. It includes a table displaying all animals with options to edit or delete each entry. Admins can also add new animals through a modal form. The page is protected by authentication middleware to ensure only admins can access it.
+
 "use client";
 import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';

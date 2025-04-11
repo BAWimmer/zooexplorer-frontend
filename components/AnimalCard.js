@@ -1,3 +1,5 @@
+// Animal Card Componennt for displaying animal details
+
 "use client";
 import { useRouter } from 'next/navigation';
 

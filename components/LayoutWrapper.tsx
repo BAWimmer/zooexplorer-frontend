@@ -1,3 +1,5 @@
+// Layout Wrapper for signin and signup pages logic. 
+
 "use client";
 import { usePathname } from 'next/navigation';
 import NavbarClient from './NavbarClient';

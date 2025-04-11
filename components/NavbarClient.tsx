@@ -1,3 +1,5 @@
+// Navbar component for site navigation.
+
 "use client";
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";

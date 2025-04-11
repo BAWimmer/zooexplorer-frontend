@@ -1,3 +1,5 @@
+// This file handles the API routes for user management, including fetching, updating, and deleting users.
+
 import { NextResponse } from 'next/server';
 import prisma from '../../../lib/prisma'; 
 import { getServerSession } from 'next-auth/next';

@@ -1,3 +1,5 @@
+// Animmal Stats component.  This component fetches animal data from a MongoDB API and displays a bar chart of the number of animals by conservation status. 
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -14,7 +16,7 @@ import {
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const AnimalStats = () => { // Changed from AnimalDietStats to AnimalStats
+const AnimalStats = () => { 
   const [animals, setAnimals] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

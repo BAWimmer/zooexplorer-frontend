@@ -1,6 +1,8 @@
+// This file is a part of a Next.js application that fetches and displays animal details from a MongoDB database.
+
 "use client";
 
-import { useState, useEffect, use } from 'react'; // Added 'use' import
+import { useState, useEffect, use } from 'react'; 
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';

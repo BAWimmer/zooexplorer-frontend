@@ -1,3 +1,5 @@
+// Animal Form Component for adding/editing animal details
+
 "use client";
 import { useState, useEffect, useRef } from 'react';
 

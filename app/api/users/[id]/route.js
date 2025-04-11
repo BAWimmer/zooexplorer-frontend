@@ -1,3 +1,5 @@
+// This file contains the API routes for handling user-related operations such as fetching, updating, and deleting user data. It uses Prisma for database interactions and NextAuth for authentication.
+
 import { NextResponse } from 'next/server';
 import prisma from '../../../../lib/prisma'; 
 import { getServerSession } from 'next-auth/next';
@@ -5,7 +7,6 @@ import { authOptions } from '../../auth/[...nextauth]/route';
 
 // Get single user
 export async function GET(request, { params }) {
-  // Await params if it's a promise
   params = await params;
   const { id } = params;
   

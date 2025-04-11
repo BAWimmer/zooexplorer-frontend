@@ -1,8 +1,9 @@
+// A basic user profile page.  
+
 "use client";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useSession, signOut } from "next-auth/react";
-import Image from "next/image";
 
 export default function Profile() {
   const router = useRouter();
@@ -276,26 +277,6 @@ export default function Profile() {
           </div>
         </div>
       </div>
-
-      {/* Zoo Section */}
-      <section id="zoo-details" className="py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-6 text-white">
-            Zoo Details
-          </h2>
-          <div className="max-w-3xl mx-auto text-center text-gray-700 space-y-4">
-            <p>
-              Our zoo is located in the heart of the city, offering visitors an immersive wildlife experience with over 200 species from around the world.
-            </p>
-            <p>
-              Explore our state-of-the-art facilities, interactive exhibits, guided tours, and conservation initiatives aimed at preserving endangered species.
-            </p>
-            <p>
-              Enjoy a day of adventure, learning, and fun as you get up close with nature!
-            </p>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

@@ -1,3 +1,5 @@
+// User Management page for admin use only.
+
 "use client";
 import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';

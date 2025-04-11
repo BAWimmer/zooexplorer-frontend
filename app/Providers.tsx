@@ -1,3 +1,5 @@
+// Providers component for managing authentication sessions
+
 "use client";
 
 import { SessionProvider } from "next-auth/react";

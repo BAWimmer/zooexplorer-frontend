@@ -1,3 +1,6 @@
+// This file handles the API routes for animals.
+// It includes GET and POST methods to fetch all animals and create a new animal respectively.
+
 import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 

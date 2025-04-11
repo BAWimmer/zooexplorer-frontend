@@ -1,3 +1,5 @@
+// Blog page component. This component fetches blog posts from an API and displays them in a grid layout.
+
 "use client";
 
 import { useState, useEffect } from 'react';

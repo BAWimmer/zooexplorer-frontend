@@ -29,7 +29,7 @@ export const authOptions = {
             return null;
           }
 
-          // Return user object without password
+          // Return user object without password for security reasons
           const { password, ...userWithoutPassword } = user;
           return userWithoutPassword;
         } catch (error) {

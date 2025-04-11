@@ -1,4 +1,4 @@
-// components/AnimalCharts.js
+// Animal Chart component for displaying animal statistics and diet statistics
 "use client";
 
 import React from 'react';
